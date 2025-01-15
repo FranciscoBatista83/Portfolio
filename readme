@@ -1,0 +1,3 @@
+Rodar o composer no terminal
+
+composer require phpmailer/phpmailer

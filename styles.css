@@ -1,0 +1,737 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* ===================================================================== 
+                                 Variaveis 
+=======================================================================*/
+:root {
+  --cor-principal: #bec2c5;
+  --cor-secundaria: #38b6ff;
+  --cor-hover-botao: #0056b3;
+  --cor-preto: #121212;
+
+  --fonte-principal: 'Space Mono', serif, Arial, sans-serif;
+  --fonte-secundaria: 'League Spartan', serif, Arial, sans-serif;
+}
+/* ==================  Estilo do corpo da página ======================  */
+body {
+  font-family: var(--fonte-principal);
+  color: var(--cor-principal);
+  background-color: var(--cor-preto);
+}
+
+/* ============================  Estilo Geral =====================  */
+
+.caixa {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 8%;
+}
+
+/* ==========================  Cabeçalho ===========================  */
+header {
+  width: 100%;
+  background-color: #121212;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  padding: 10px 10px;
+  display: block;
+  margin: 0 5%;
+}
+
+header nav ul li a:hover {
+  color: var(--cor-secundaria);
+}
+
+/* ===============================  Seção Home =======================  */
+#home {
+  background-image: url(img/bg1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+}
+
+#home h2,
+#home h2 strong {
+  font-size: 3.5rem;
+  font-family: var(--fonte-secundaria);
+}
+
+#home h2 strong {
+  color: var(--cor-secundaria);
+}
+
+#home h3 {
+  margin-bottom: 2%;
+  font-size: 1.5rem;
+}
+
+#home .desenvolvedor {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-preto);
+  width: 40%;
+  padding-left: 1%;
+  border-radius: 4px;
+}
+
+#home p {
+  text-indent: 30px;
+  font-size: 1.2rem;
+  max-width: 70%;
+  text-align: justify;
+}
+
+/* ==============================  Seção Sobre =============================  */
+#sobre {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  min-height: 100vh;
+}
+
+#sobre h2 {
+  font-size: 3.5rem;
+  font-family: var(--fonte-secundaria);
+}
+
+#sobre p {
+  font-size: 1.1rem;
+  padding-left: 20%;
+  max-width: 100%;
+  text-align: justify;
+text-indent: 30px;
+margin-top: 1%;
+  
+}
+
+#sobre h3 {
+  font-size: 1.5rem;
+}
+
+#sobre .linha-bio {
+  width: 30%;
+  height: 10px;
+  background-color: var(--cor-secundaria);
+  border-radius: 4px;
+  margin-left: 70%;
+  margin-bottom: 2%;
+}
+
+/* ===========================  Seção Formação ========================  */
+#formacao {
+  min-height: 100vh;
+  background-image: url(img/bg2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+#formacao .caixa {
+  flex-direction: row;
+  margin: 8% 8% 8% 8%;
+}
+
+#formacao .caixa .container1 {
+  max-width: 50%;
+  max-height: 100%;
+  padding: 1% 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+#formacao .caixa .container1 h2 {
+  font-size: 3.5rem;
+  font-family: var(--fonte-secundaria);
+}
+
+#formacao .caixa .container1 p {
+  font-size: 1.2rem;
+  width: 90%;
+  margin-top: 4%;
+}
+
+#formacao .caixa .container1 .linha-formacao {
+  width: 60%;
+  height: 10px;
+  background-color: var(--cor-secundaria);
+  border-radius: 4px;
+}
+
+#formacao .caixa .container2 {
+  max-width: 50%;
+  max-height: 100%;
+  padding: 1% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#formacao .caixa .container2 .item-edu {
+  padding: 20px;
+}
+
+#formacao .caixa .container2 .item-edu h3 {
+  font-size: 1.5rem;
+}
+
+#formacao .caixa .container2 .item-edu p {
+  font-size: 1rem;
+}
+
+/* =============================  Seção Projetos =======================  */
+#projetos {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+}
+
+#projetos h2 {
+  font-size: 3.5em;
+  font-family: var(--fonte-secundaria);
+  margin: 3% 15% 0% 10%;
+}
+
+#projetos .linha-projetos {
+  background-color: var(--cor-secundaria);
+  border-radius: 4px;
+  width: 25%;
+  height: 10px;
+  margin-right: 15%;
+}
+
+#projetos .caixa {
+  flex-direction: row;
+  margin: 1% 15% 10% 12%;
+}
+
+#projetos .caixa .projetos-coluna .card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#projetos .caixa .projetos-coluna .card:hover {
+  transform: translateY(-10px);
+}
+
+#projetos .caixa .projetos-coluna .card img {
+  width: 40%;
+  height: 10%;
+}
+
+#projetos .caixa .projetos-coluna .card .card-body {
+  padding: 3%;
+}
+
+#projetos .caixa .projetos-coluna .card .card-body h5 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#projetos .caixa .projetos-coluna .card .card-body p {
+  font-size: 1rem;
+  color: var(--cor-principal);
+  margin-bottom: 2%;
+}
+
+#projetos .caixa .projetos-coluna .card .card-body .btn {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+  font-size: 1.2em;
+  padding: 1% 3%;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+  text-decoration: none;
+}
+
+#projetos .caixa .projetos-coluna .card .card-body .btn:hover {
+  background-color: var(--cor-hover-botao);
+}
+
+/* ====================  Seção Contato =======================  */
+#contato {
+  background-image: url(img/bg3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#contato .caixa {
+  text-align: center;
+  align-items: center;
+}
+
+#contato .caixa h2 {
+  font-size: 3.5rem;
+  font-family: var(--fonte-secundaria);
+}
+
+#contato .caixa .linha-contato {
+  margin-bottom: 5%;
+  height: 10px;
+  width: 30%;
+  background-color: var(--cor-secundaria);
+  border-radius: 4px;
+}
+
+#contato .caixa form {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contato .caixa form label {
+  font-size: 1.1rem;
+}
+
+#contato .caixa form .form-control {
+  font-family: var(--fonte-principal);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#contato .caixa form .btn {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  font-family: var(--fonte-principal);
+}
+
+#contato .caixa form .btn:hover {
+  background-color: var(--cor-hover-botao);
+}
+
+.social-links {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.social-links a {
+  color:var(--cor-secundaria);
+  font-size: 3rem;
+  text-decoration: none;
+  transition: color 0.3s;
+ 
+}
+
+.social-links a:hover {
+  color: var(--cor-hover-botao);
+}
+
+/* ===================== Rodapé ==============================*/
+footer {
+  color: var(--cor-principal);
+  text-align: center;
+  padding: 15px 0;
+  background-color: var(--cor-preto);
+}
+
+/* ==========================================================
+                            Tablet 
+=============================================================*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /*  ==================  Cabeçalho  =======================  
+  ===========================================================*/
+
+  header nav ul {
+    gap: 20px;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+
+ 
+  /* ======================  Seção Home ======================
+  =============================================================*/
+
+  #home {
+    height: 100%;
+  }
+
+  #home .caixa {
+    margin-top: 10%;
+    gap: 30px;
+  }
+
+  #home h2,
+  #home h2 strong {
+    font-size: 3rem;
+  }
+
+  #home h3 {
+    margin-bottom: 2%;
+    font-size: 1.3rem;
+  }
+
+  #home .desenvolvedor {
+    width: 100%;
+    padding-left: 1%;
+    border-radius: 4px;
+  }
+
+  #home p {
+    font-size: 1.1rem;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  /*  ======================= Seção Sobre ====================
+  =============================================================*/
+
+  #sobre {
+    height: 100%;
+  }
+
+  #sobre h2 {
+    font-size: 3rem;
+    margin-top: 10%;
+  }
+
+  #sobre p {
+    font-size: 1.1rem;
+    padding-left: 0;
+    margin-top: 15%;
+  }
+
+  #sobre h3 {
+    font-size: 1.3rem;
+  }
+
+  /*  ====================== Seção Formação =========================  
+  ===================================================================*/
+
+  #formacao {
+    height: 100%;
+  }
+
+  #formacao .caixa {
+    flex-direction: column;
+    justify-content: center;
+    margin: 10% 8% 8% 8%;
+  }
+
+  #formacao .caixa .container1 {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1% 1%;
+  }
+
+  #formacao .caixa .container1 h2 {
+    font-size: 3rem;
+  }
+
+  #formacao .caixa .container1 p {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  #formacao .caixa .container1 .linha-formacao {
+    width: 50%;
+  }
+
+  #formacao .caixa .container2 {
+    max-width: 100%;
+  }
+
+  #formacao .caixa .container2 .item-edu {
+    padding: 20px 0px;
+  }
+
+  #formacao .caixa .container2 .item-edu h3 {
+    font-size: 1.3rem;
+  }
+
+  #formacao .caixa .container2 .item-edu p {
+    font-size: 0.8rem;
+  }
+
+  /*  ================= Seção Projetos ====================
+  ========================================================*/
+
+  #projetos {
+    height: 100%;
+    padding: 10% 8% 8% 8%;
+  }
+
+  #projetos h2 {
+    font-size: 3em;
+    font-family: var(--fonte-secundaria);
+    margin: 0;
+  }
+
+  #projetos .linha-projetos {
+    width: 35%;
+    margin: 0% 0% 5% 0%;
+  }
+
+  #projetos .caixa {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  #projetos .caixa .projetos-coluna .card .card-body h5 {
+    font-size: 1em;
+  }
+
+  #projetos .caixa .projetos-coluna .card .card-body p {
+    font-size: 0.8rem;
+  }
+
+  #projetos .caixa .projetos-coluna .card .card-body .btn {
+    font-size: 1em;
+  }
+
+  /*  ====================== Seção Contato ===================== 
+  ===============================================================*/
+
+  #contato {
+    height: 100%;
+    padding-top: 10%;
+  }
+
+  #contato .caixa h2 {
+    font-size: 3rem;
+  }
+
+  #contato .caixa .linha-contato {
+    width: 40%;
+  }
+
+  #contato .caixa form {
+    max-width: 70%;
+  }
+
+  #contato .caixa form label {
+    font-size: 0.8rem;
+  }
+
+  #contato .caixa form .form-control {
+    font-size: 0.8rem;
+  }
+
+  #contato .caixa form .btn {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==========================================================
+                            Mobile 
+=============================================================*/
+
+@media (max-width: 767px) {
+  /*  ==================  Cabeçalho  =======================  
+  ===========================================================*/
+
+  header {
+    display: none;
+  }
+
+  /* ======================  Seção Home ======================
+  =============================================================*/
+
+  #home {
+    height: 100%;
+  }
+
+  #home .caixa {
+    margin-top: 8%;
+    gap: 30px;
+  }
+
+  #home h2,
+  #home h2 strong {
+    font-size: 2.5rem;
+  }
+
+  #home h3 {
+    font-size: 1.5rem;
+  }
+
+  #home .desenvolvedor {
+    width: 100%;
+  }
+
+  #home p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /*  ======================= Seção Sobre ====================
+  =============================================================*/
+
+  #sobre {
+    height: 100%;
+  }
+
+  #sobre h2 {
+    font-size: 2.5rem;
+  }
+
+  #sobre p {
+    font-size: 1rem;
+    padding-left: 0;
+    margin-top: 15%;
+  }
+
+  #sobre h3 {
+    font-size: 1.3rem;
+  }
+
+  #sobre .linha-bio {
+    width: 40%;
+    margin-left: 60%;
+  }
+
+  /*  ====================== Seção Formação =========================  
+  ===================================================================*/
+
+  #formacao {
+    height: 100%;
+  }
+
+  #formacao .caixa {
+    flex-direction: column;
+  }
+
+  #formacao .caixa .container1 {
+    max-width: 100%;
+  }
+
+  #formacao .caixa .container1 h2 {
+    font-size: 2.5em;
+  }
+
+  #formacao .caixa .container1 p {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #formacao .caixa .container1 .linha-formacao {
+    width: 60%;
+  }
+
+  #formacao .caixa .container2 {
+    max-width: 100%;
+  }
+
+  #formacao .caixa .container2 .item-edu {
+    padding: 20px 0px;
+  }
+
+  #formacao .caixa .container2 .item-edu h3 {
+    font-size: 1.1rem;
+  }
+
+  #formacao .caixa .container2 .item-edu p {
+    font-size: 0.8rem;
+  }
+
+  /*  ================= Seção Projetos ====================
+  ========================================================*/
+
+  #projetos {
+    padding: 8%;
+  }
+
+  #projetos h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  #projetos .linha-projetos {
+    width: 65%;
+    margin: 0% 0% 5% 0%;
+  }
+
+  #projetos .caixa {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #projetos .caixa .projetos-coluna .card .card-body h5 {
+    font-size: 1rem;
+  }
+
+  #projetos .caixa .projetos-coluna .card .card-body p {
+    font-size: 0.8rem;
+  }
+
+  #projetos .caixa .projetos-coluna .card .card-body .btn {
+    font-size: 1rem;
+  }
+
+  /*  ====================== Seção Contato ===================== 
+  ===============================================================*/
+
+  #contato {
+    padding-top: 16%;
+    height: 100%;
+  }
+
+  #contato .caixa h2 {
+    font-size: 2.5em;
+  }
+
+  #contato .caixa .linha-contato {
+    width: 60%;
+  }
+
+  #contato .caixa form {
+    max-width: 85%;
+  }
+
+  #contato .caixa form label {
+    font-size: 0.8em;
+  }
+
+  #contato .caixa form .form-control {
+    font-size: 0.8rem;
+  }
+
+  #contato .caixa form .btn {
+    font-size: 1rem;
+  }
+}
