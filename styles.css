@@ -225,9 +225,14 @@ margin-top: 1%;
   margin-right: 15%;
 }
 
+
 #projetos .caixa {
   flex-direction: row;
   margin: 1% 15% 10% 12%;
+}
+
+#projetos .caixa .projetos-coluna {
+  width: 50%;
 }
 
 #projetos .caixa .projetos-coluna .card {
@@ -243,8 +248,9 @@ margin-top: 1%;
 }
 
 #projetos .caixa .projetos-coluna .card img {
-  width: 40%;
-  height: 10%;
+  width: 15em;
+  height: 13em;
+  
 }
 
 #projetos .caixa .projetos-coluna .card .card-body {
