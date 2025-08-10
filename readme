@@ -1,3 +1,31 @@
-Rodar o composer no terminal
+# Nome do Projeto
 
-composer require phpmailer/phpmailer
+[![Build Status](https://github.com/FranciscoBatista83/NOME-DO-PROJETO/actions/workflows/main.yml/badge.svg)](https://github.com/FranciscoBatista83/NOME-DO-PROJETO/actions)
+![Language: Python](https://img.shields.io/badge/Language-Python-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/FranciscoBatista83/NOME-DO-PROJETO)
+
+---
+
+## Descrição
+
+Descreva aqui o que seu projeto faz, qual problema resolve e seus principais recursos.
+
+---
+
+## Tecnologias Utilizadas
+
+- Python  
+- JavaScript  
+- HTML5/CSS3
+
+---
+
+## Instalação
+
+Passos para instalar e rodar seu projeto localmente:
+
+```bash
+git clone https://github.com/FranciscoBatista83/NOME-DO-PROJETO.git
+cd NOME-DO-PROJETO
+# comandos para instalar dependências
